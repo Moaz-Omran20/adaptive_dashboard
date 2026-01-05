@@ -9,18 +9,23 @@ class IncomeSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomBackgroundContainer(paddingValue: 20, child: Column(
-      children: [
-        IncomeHeader(),
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Expanded(child: IncomeChart()),
-            Expanded(child: IncomeDetailsListView()),
-          ],
-        )
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 10),
+      child: CustomBackgroundContainer(paddingValue: 20, child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          IncomeHeader(),
+          SizedBox(height: 16,),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Expanded(child: IncomeChart()),
+              Expanded(child: IncomeDetailsListView()),
+            ],
+          )
 
-      ],
-    ));
+        ],
+      )),
+    );
   }
 }
