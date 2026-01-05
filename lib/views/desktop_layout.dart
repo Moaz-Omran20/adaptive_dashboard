@@ -28,7 +28,7 @@ class DesktopLayout extends StatelessWidget {
                       child: Column(
                         children: [
                           AllExpensesWidget(),
-                          SizedBox(height: 25),
+                          SizedBox(height: 24),
                           QuickInvoiceWidget(),
                         ],
                       ),
@@ -39,7 +39,7 @@ class DesktopLayout extends StatelessWidget {
                       child: Column(
                         children: [
                           MyCardAndTransactionSection(),
-                          SizedBox(height: 25),
+                          SizedBox(height: 24),
                           Expanded(child: IncomeSection()),
                         ],
                       ),
