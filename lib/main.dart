@@ -1,8 +1,9 @@
 import 'package:adaptive_dashboard/views/dashboard_view.dart';
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(AdaptiveDashboard());
+  runApp(DevicePreview(enabled: false,builder: (context) => AdaptiveDashboard()));
 }
 
 class AdaptiveDashboard extends StatelessWidget {
@@ -10,6 +11,11 @@ class AdaptiveDashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false,home: DashboardView());
+    return MaterialApp(
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
+      debugShowCheckedModeBanner: false,
+      home: DashboardView(),
+    );
   }
 }
