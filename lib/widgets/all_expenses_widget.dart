@@ -34,19 +34,13 @@ class _AllExpensesWidgetState extends State<AllExpensesWidget> {
             Row(
               children: List.generate(expensesItems.length, (index) {
                 return Expanded(
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(
-                      vertical: 20,
-                      horizontal: index == 1 ? 20 : 0,
-                    ),
-                    child: AllExpensesItem(
-                      expensesItem: expensesItems[index],
-                      isSelected: index == isSelected,
-                      function: () {
-                        isSelected = index;
-                        setState(() {});
-                      },
-                    ),
+                  child: AllExpensesItem(
+                    expensesItem: expensesItems[index],
+                    isSelected: index == isSelected,
+                    function: () {
+                      isSelected = index;
+                      setState(() {});
+                    },
                   ),
                 );
               }),

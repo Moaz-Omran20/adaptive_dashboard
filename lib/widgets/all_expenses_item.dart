@@ -61,17 +61,20 @@ class AllExpensesItem extends StatelessWidget {
             Text(
               "April 2022",
               style: TextStyle(
-                color: isSelected ?Colors.white:Color(0xFFAAAAAA),
+                color: isSelected ? Colors.white : Color(0xFFAAAAAA),
                 fontSize: 14,
                 fontFamily: "Montserrat",
               ),
             ),
             SizedBox(height: 16),
-            Text(
-              "\$20,129",
-              style: isSelected
-                  ? AppStyles.semiBold24.copyWith(color: Colors.white)
-                  : AppStyles.semiBold24,
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                "\$20,129",
+                style: isSelected
+                    ? AppStyles.semiBold24.copyWith(color: Colors.white)
+                    : AppStyles.semiBold24,
+              ),
             ),
           ],
         ),

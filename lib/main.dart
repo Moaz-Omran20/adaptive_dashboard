@@ -3,7 +3,7 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(DevicePreview(enabled: false,builder: (context) => AdaptiveDashboard()));
+  runApp(DevicePreview(enabled: true,builder: (context) => AdaptiveDashboard()));
 }
 
 class AdaptiveDashboard extends StatelessWidget {

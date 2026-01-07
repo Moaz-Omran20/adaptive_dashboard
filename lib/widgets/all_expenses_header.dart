@@ -11,7 +11,6 @@ class AllExpensesHeader extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text("All Expenses", style: AppStyles.semiBold20),
-
         Container(
           decoration: BoxDecoration(
             border: Border.all(color: Color(0xFFF1F1F1)),
