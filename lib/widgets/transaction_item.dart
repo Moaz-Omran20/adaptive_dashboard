@@ -11,11 +11,11 @@ class TransactionItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 0,
-      color: Color(0xFFAAAAAA),
+      color: Color(0xFFfafafa),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       child: ListTile(
         title: Text(transactionItemModel.title,style: AppStyles.semiBold16.copyWith(fontSize: 12),),
-        subtitle: Text(transactionItemModel.subTitle,style: AppStyles.regularGrey12.copyWith(color: Colors.white60),),
+        subtitle: Text(transactionItemModel.subTitle,style: AppStyles.regularGrey12.copyWith(color: Colors.black),),
         trailing: Text(
           "\$20,129",
           style: AppStyles.styleRegularSelected16.copyWith(
